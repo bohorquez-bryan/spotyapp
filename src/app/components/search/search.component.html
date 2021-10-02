@@ -1,0 +1,13 @@
+<form class="form-inline my-2 my-lg-0">
+    <input #termino class="form-control mr-sm-2" type="search" placeholder="Buscar Artista" aria-label="Search" (keyup)="searchArt(termino.value)">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+  </form>
+
+  <div class="card-columns m-5">
+    <div *ngFor="let art of artistas" class="card">
+      <img [src]="art.images[0].url" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{art.name}}</h5>
+      </div>
+    </div>
+</div>
